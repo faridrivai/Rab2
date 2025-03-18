@@ -812,19 +812,21 @@ input.editable:focus {
     <script>
        const fundingData = {
     sources: [
-        { name: "Iuran Peserta", description: "Iuran @ Rp. 150.000 × 51 orang", amount: 7600000 },
-        { name: "Donasi", description: "Dari berbagai donatur", amount: 6050000 },
+        { name: "Iuran Peserta", description: "Iuran @ Rp. 150.000 × 53 orang", amount: 7950000 },
+        { name: "Donasi", description: "Dari berbagai donatur", amount: 6300000 },
     ]
 };
 
 const donationDetailData = {
     name: "Rincian Penggunaan Dana Donasi",
     items: [
-        { name: "Santunan Anak Yatim", description: "Santunan tunai 21 anak", quantity: 1, unit: "Paket", price: 2100000, total: 2100000, status: "Digunakan" },
-        { name: "Bingkisan Anak Yatim", description: "Minyak, sirup, gula, biskuit, teh", quantity: 1, unit: "Paket", price: 1575000, total: 1575000, status: "Digunakan" },
-        { name: "Penceramah", description: "Ceramah Ramadan", quantity: 1, unit: "Orang", price: 500000, total: 500000, status: "Digunakan" },
+        { name: "Santunan Anak Yatim", description: "Santunan tunai 23 anak", quantity: 1, unit: "Paket", price: 2300000, total: 2300000, status: "Digunakan" },
+        { name: "Bingkisan Anak Yatim", description: "Minyak, sirup, gula, biskuit, teh", quantity: 23, unit: "Paket", price: 1790216, total: 1790216, status: "Digunakan" },
+        { name: "Penceramah", description: "Ceramah Ramadan", quantity: 1, unit: "Orang", price: 700000, total: 700000, status: "Digunakan" },
         { name: "Hampers guru", description: "Mangkok hampers", quantity: 35, unit: "Pack", price: 23000, total: 801016, status: "Digunakan" },
-        { name: "Sisa Dana Donasi", description: "Belum dialokasikan", quantity: 1, unit: "Paket", price: 653984, total: 653984, status: "Tersisa" }
+        { name: "Nasi kotak", description: "Dbesto+teh pucuk", quantity: 23, unit: "Pack", price: 20000, total: 460000, status: "Digunakan" },
+        { name: "Taplak", description: "500x70 (4 buah)", quantity: 4, unit: "Pack", price: 20000, total: 250000, status: "Digunakan" },
+        { name: "Sisa Dana Donasi", description: "Minus", quantity: 1, unit: "Paket", price: -1232, total: -1232, status: "Tersisa" }
     ]
 };
 
@@ -833,14 +835,15 @@ const budgetData = {
         {
             name: "Konsumsi",
             items: [
-                { name: "Nasi kotak", description: "Ayam Kambal", quantity: 74, unit: "Pack", price: 25000, total: 1850000, status: "Digunakan" },
-                { name: "Nasi kotak", description: "Dbesto+teh pucuk", quantity: 21, unit: "Pack", price: 20000, total: 420000, status: "Digunakan" },
+                { name: "Nasi kotak", description: "Ayam Kambal", quantity: 75, unit: "Pack", price: 27000, total: 2025000, status: "Digunakan" },
+                { name: "Nasi kotak", description: "Dbesto+teh pucuk", quantity: 23, unit: "Pack", price: 20000, total: 460000, status: "Digunakan" },
                 { name: "Nasi kotak", description: "Nasi bakar", quantity: 25, unit: "Pack", price: 15000, total: 375000, status: "Digunakan" },
                 { name: "Air mineral", description: "Cleo 330 ml", quantity: 6, unit: "Dus", price: 40000, total: 240000, status: "Digunakan" },
                 { name: "Snack box", description: "Risol Mayo,Lontong,Aqua Gelas,Kurma", quantity: 130, unit: "Pieces", price: 6000, total: 780000, status: "Digunakan" },
                 { name: "Gorengan", description: "Tempe,Risol,Bakwan", quantity: 150, unit: "Pcs", price: 1500, total: 225000, status: "Digunakan" },
                 { name: "Kue basah", description: "Kue tradisional basah aneka rasa", quantity: 100, unit: "Pcs", price: 2000, total: 200000, status: "Digunakan" },
-                { name: "Es prasmanan", description: "es Timun selasi,Es Buah,Es Teh ", quantity: 30 Liter, unit: "Liter", price: -, total: 370000, status: "Digunakan" },
+                { name: "Es buah", description: " ", quantity: 30, unit: "Liter", price: 9000, total: 270000, status: "Digunakan" },
+                { name: "Es teh manis", description: "", quantity: 30, unit: "Liter", price: 2000, total: 60000, status: "Digunakan" },
                 { name: "Es batu", description: "kristal", quantity: 2, unit: "kg", price: 20000, total: 40000, status: "Digunakan" },
                 { name: "Jeruk", description: "Jeruk medan", quantity: 3, unit: "Kg", price: 30000, total: 90000, status: "Digunakan" },
                 { name: "Salak", description: "Salak pondoh", quantity: 3, unit: "Kg", price: 20000, total: 60000, status: "Digunakan" },
@@ -860,6 +863,7 @@ const budgetData = {
                 { name: "Tisu", description: "3", quantity: 1, unit: "Pack", price: 23000, total: 23000, status: "Digunakan" },
                 { name: "Goodie Bag ", description: "1 Lusin", quantity: 5, unit: "Pcs", price: 28000, total: 140000, status: "Digunakan" },
                  { name: "Plakat ", description: "1 ", quantity: 1, unit: "Pcs", price: 127000, total: 127000, status: "Digunakan" },
+                 { name: "Taplak", description: "500x70 (4 buah)", quantity: 4, unit: "Pack", price: 20000, total: 250000, status: "Digunakan" },
                 { name: "Tenda + jasa angkut (DP) ", description: "15X7 meter", quantity: 1, unit: "Set", price: 1562500, total: 1562500, status: "Digunakan" },
                 { name: "Tenda + jasa angkut ", description: "15X7 meter", quantity: 1, unit: "Set", price: 1562500, total: 1562500, status: "Digunakan" }
             ]
@@ -886,6 +890,15 @@ const budgetData = {
             ]
         },
         {
+            name: "Bingkisan Anak Yatim dadak(Karena ada tambahan anak yatim mendadak)",
+            items: [
+                { name: "Minyak", description: "Minyak goreng 1 liter", quantity: 2, unit: "Botol", price: 17000, total: 34000, status: "Digunakan" },
+                { name: "Sirup", description: "marjan 450ml", quantity: 2, unit: "Kaleng", price: 11400, total: 22800, status: "Digunakan" },
+                { name: "Gula", description: "Gula pasir kemasan 1kg", quantity: 2, unit: "Pack", price: 17700, total: 35400, status: "Digunakan" },
+                { name: "Biskuit", description: "Biskuit wafer stick", quantity: 2, unit: "Kaleng", price: 15000, total: 30000, status: "Digunakan" }
+            ]
+        },
+        {
             name: "Bingkisan Anak Yatim eceran",
             items: [
             { name: "Minyak", description: "Minyak goreng 1 liter (termasuk diskon Rp 25.000)", quantity: 12, unit: "Botol", price: 17000, total: 155000, status: "Digunakan" },
@@ -907,8 +920,9 @@ const budgetData = {
         {
             name: "Jasa",
             items: [
-                { name: "Penceramah", description: "Ceramah Ramadan", quantity: 1, unit: "Orang", price: 500000, total: 500000, status: "Digunakan" },
+                { name: "Penceramah", description: "Ceramah Ramadan", quantity: 1, unit: "Orang", price: 700000, total: 700000, status: "Digunakan" },
                 { name: "Keamanan", description: "Parkiran Motor/Mobil", quantity: 2, unit: "Orang", price: 50000, total: 100000, status: "Digunakan" },
+                { name: "Pick up barang", description: "Pickup Konsumsi,Bingkisan,DLL", quantity: 2, unit: "Orang", price: 75000, total: 150000, status: "Digunakan" },
                 { name: "Kebersihan", description: "", quantity: 1, unit: "orang", price: 50000, total: 50000, status: "Digunakan" }
             ]
         },
